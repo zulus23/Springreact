@@ -49,6 +49,11 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+
+                <!--<configuration>
+                    <mainClass>${spring.boot.mainclass}</mainClass>
+                </configuration>-->
+
             </plugin>
 
             <plugin>
@@ -102,7 +107,7 @@
                         <configuration>
                             <exportAntProperties>true</exportAntProperties>
                             <target>
-                                <property name="main.basedir" location="./.." />
+                                <property name="main.basedir" location="./.."/>
                                 <copy todir="${project.build.directory}/classes/public">
                                     <fileset dir="${main.basedir}/spring-react-frontend/build"/>
                                 </copy>
@@ -119,7 +124,7 @@
                             <exportAntProperties>true</exportAntProperties>
                             <target>
                                 <!--Adjust the location below to your directory structure -->
-                                <property name="main.basedir" location="./.." />
+                                <property name="main.basedir" location="./.."/>
                                 <echo message="main.basedir=${main.basedir}"/>
                             </target>
                         </configuration>
